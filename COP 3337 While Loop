@@ -1,0 +1,21 @@
+/* From Zybooks Assignment: Write a while loop that prints userNum divided by 2 (integer division) until reaching 1. 
+Follow each number by a space. Example output for userNum = 40: 20 10 5 2 1
+*/
+
+import java.util.Scanner;
+
+public class DivideByTwoLoop {
+   public static void main (String [] args) {
+      Scanner scnr = new Scanner(System.in);
+      int userNum;
+
+      userNum = scnr.nextInt();
+      //While loop
+      while(userNum >= 2) {             //Because we have to divide by 2, we do greater than or equal to 2.
+         userNum = userNum / 2;         //After a loop, userNum is divided. 40 to 20. 20 to 10. 10 to 5. 5 to 2 (2.5 rounds down). 2 to 1.
+         System.out.print(userNum + " "); //Print userNum after each loop with a space after.
+      }
+
+      System.out.println("");
+   }
+}
