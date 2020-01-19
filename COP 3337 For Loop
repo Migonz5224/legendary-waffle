@@ -1,0 +1,18 @@
+/* From Zybook Assignment: Write code that prints: userNum ... 2 1
+Print a newline after each number. Ex: userNum = 3 outputs:
+
+public class ForLoops {
+  public static void main (String[] args) {
+    int userNum;
+    int i;
+    
+    userNum = 3;
+    
+    //We know userNum equals 3. We want i to be 3. We assign userNum to i.
+    //We are decrementing from userNum until we reach 1.
+   
+   for(i = userNum; i >= 1; --i) {
+      System.out.println(i);
+      }
+    }
+ }
