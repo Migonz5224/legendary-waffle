@@ -1,0 +1,29 @@
+/* Assignment: Write a for loop to print all elements in courseGrades, following each element with a space (including the last). 
+Print forwards, then backwards. End each loop with a newline. Ex: If courseGrades = {7, 9, 11, 10}, print:
+7 9 11 10 
+10 11 9 7 
+Hint: Use two for loops. Second loop starts with i = courseGrades.length - 1. */
+
+import java.util.Scanner;
+//Lines 7 to 18 were given to me as part of the assignment.
+public class CourseGradePrinter {
+   public static void main (String [] args) {
+      Scanner scnr = new Scanner(System.in);
+      final int NUM_VALS = 4;
+      int [] courseGrades = new int[NUM_VALS];
+      int i;
+
+      for (i = 0; i < courseGrades.length; ++i) {
+         courseGrades[i] = scnr.nextInt();
+      }
+      for (i = 0; i < NUM_VALS; ++i){             //Use variable name to reduce out of bounds index. Used NUM_VALS instead of 4.
+         System.out.print(courseGrades[i] + " "); //We are incrementing and printing index value.
+      }
+      System.out.print("\n");                     //I'm not sure how to separate two for loops with a newline so I just asked it to print a line. It works. I'll update when I learn to do this.
+      for (i = courseGrades.length - 1; i >=0; --i){  //Followed the assignment notes and we decrement from that value. We use equal to or greater than 0 as 0 is an index(starts at 0), if do not equal the last element in the backwards loop will not print.
+         System.out.print(courseGrades[i] + " ");
+      }
+      System.out.print("\n");                     //Again, I'll figure this out. 
+
+   }
+}
