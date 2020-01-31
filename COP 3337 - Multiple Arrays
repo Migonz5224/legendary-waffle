@@ -1,0 +1,37 @@
+/* Another Zybook Short Assignment: Multiply each element in origList with the corresponding value in offsetAmount. 
+Print each product followed by a space.
+I only wrote lines 24 to  29. 
+*/
+
+import java.util.Scanner;
+
+public class SumVectorElements {
+   public static void main (String [] args) {
+        final int NUM_VALS = 4;
+        int[] origList = new int[NUM_VALS];
+        int[] offsetAmount = new int[NUM_VALS];
+        int i;
+
+        origList[0] = 40;
+        origList[1] = 50;
+        origList[2] = 60;
+        origList[3] = 70;
+
+        offsetAmount[0] = 5;
+        offsetAmount[1] = 7;
+        offsetAmount[2] = 3;
+        offsetAmount[3] = 0;
+        
+        //Used one array to put the product of into. Printed the product with a space. Created an if statement.
+        for (i = 0; (i < origList.length); ++i){
+            origList[i] = origList[i] * offsetAmount[i];
+            System.out.print(origList[i] + " ");
+                if(i >= origList.length){
+                    System.out.print(origList[i]);
+            }
+        }
+        
+        
+        System.out.println("");
+   }
+}
