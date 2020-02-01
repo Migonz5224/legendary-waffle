@@ -1,0 +1,41 @@
+/* Assingment: Find the maximum value and minimum value in milesTracker. Assign the maximum value to maxMiles, and the minimum 
+value to minMiles. Sample output for the given program:
+*/
+
+import java.util.Scanner;
+
+public class ArraysKeyValue {
+   public static void main (String [] args) {
+      Scanner scnr = new Scanner(System.in);
+      final int NUM_ROWS = 2;
+      final int NUM_COLS = 2;
+      int [][] milesTracker = new int[NUM_ROWS][NUM_COLS];
+      int i;
+      int j;
+      int maxMiles; // Assign with first element in milesTracker before loop
+      int minMiles; // Assign with first element in milesTracker before loop
+
+      for (i = 0; i < milesTracker.length; i++){
+         for (j = 0; j < milesTracker[i].length; j++){
+            milesTracker[i][j] = scnr.nextInt();
+         }
+      }
+//Wrote lines 24 to 35. Lines 24 and 25 we are assigning first element before the loop. (0 is first element.)
+      maxMiles = milesTracker[0][0];
+      minMiles = milesTracker[0][0];
+ //I kept getting errors. New to multidimensional arrays so I forgot to fully initiliaze int j. Line 28 is the second for loop for j.
+ //We create an if else if to find max and min values.
+      for (i = 0; i < milesTracker.length; ++i){
+         for (j = 0; j < milesTracker.length; ++j){
+         if (milesTracker[i][j] > maxMiles){
+            maxMiles = milesTracker[i][j];
+         }
+            else if (milesTracker[i][j] < minMiles){
+               minMiles = milesTracker[i][j];
+            }}
+      }
+
+      System.out.println("Min miles: " + minMiles);
+      System.out.println("Max miles: " + maxMiles);
+   }
+}
